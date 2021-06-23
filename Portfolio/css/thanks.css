@@ -1,0 +1,244 @@
+@charset "UTF-8";
+/*---------------------------------------
+    変数の宣言
+---------------------------------------*/
+/*---------------------------------------
+    base
+---------------------------------------*/
+html {
+  font-size: 62.5%;
+  scroll-behavior: smooth;
+}
+
+body {
+  background: -webkit-gradient(linear, left top, left bottom, from(#9cecfb), color-stop(#65c7f7), to(#0052d4));
+  background: -webkit-linear-gradient(#9cecfb, #65c7f7, #0052d4);
+  background: linear-gradient(#9cecfb, #65c7f7, #0052d4);
+  font-family: "Roboto", sans-serif, "Noto Sans JP", sans-serif;
+  letter-spacing: 0.05em;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-size: 1.6rem;
+  color: #fff;
+}
+
+@media (max-width: 767px) {
+  body {
+    font-size: 1.4rem;
+  }
+}
+
+.header {
+  width: 100vw;
+  font-size: 2rem;
+  line-height: 1.5;
+}
+
+@media (max-width: 767px) {
+  section {
+    margin-bottom: 50px;
+  }
+}
+
+.container {
+  height: 100%;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.link-btn {
+  text-decoration: none;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+  color: #fff;
+  display: block;
+  cursor: pointer;
+}
+
+.pc-hidden {
+  display: none;
+}
+
+@media (max-width: 767px) {
+  .pc-hidden {
+    display: block;
+  }
+}
+
+@media (max-width: 767px) {
+  .sp-hidden {
+    display: none;
+  }
+}
+
+/*---------------------------------------
+    header
+---------------------------------------*/
+.header {
+  height: 80px;
+  padding: 20px 0;
+  background-color: #3cc;
+  position: fixed;
+  top: 0;
+  left: 0;
+}
+
+.header .link-btn {
+  display: inline-block;
+}
+
+.header .link-btn:hover {
+  border-bottom: 3px dotted #fff;
+}
+
+.header .logo {
+  background-color: transparent;
+  text-shadow: 0 0 10px #fff;
+}
+
+/*---------------------------------------
+    thanks
+---------------------------------------*/
+.thanks-wrapper {
+  height: 100vh;
+}
+
+.thanks-wrapper .thanks {
+  font-size: 3rem;
+}
+
+.thanks-wrapper .text {
+  font-size: 2rem;
+}
+
+.bubbles {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+  overflow: hidden;
+  top: 0;
+  left: 0;
+}
+
+.bubble {
+  position: absolute;
+  bottom: -40;
+  width: 40px;
+  height: 40px;
+  background-color: transparent;
+  border: 1px solid #fff;
+  border-radius: 50%;
+  -webkit-animation: bubble 10s ease-in infinite;
+          animation: bubble 10s ease-in infinite;
+}
+
+.bubble:nth-child(1) {
+  width: 20px;
+  height: 20px;
+  left: 30%;
+  -webkit-animation-duration: 6s;
+          animation-duration: 6s;
+}
+
+.bubble:nth-child(2) {
+  left: 20%;
+  -webkit-animation-duration: 3.5s;
+          animation-duration: 3.5s;
+}
+
+.bubble:nth-child(3) {
+  width: 30px;
+  height: 30px;
+  left: 30%;
+  -webkit-animation-duration: 7s;
+          animation-duration: 7s;
+}
+
+.bubble:nth-child(4) {
+  width: 50px;
+  height: 50px;
+  left: 67%;
+  -webkit-animation-duration: 6s;
+          animation-duration: 6s;
+}
+
+.bubble:nth-child(5) {
+  width: 20px;
+  height: 20px;
+  left: 70%;
+  -webkit-animation-duration: 4.5s;
+          animation-duration: 4.5s;
+}
+
+@-webkit-keyframes bubble {
+  0% {
+    bottom: -100px;
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+  }
+  50% {
+    -webkit-transform: translateX(100px);
+            transform: translateX(100px);
+  }
+  100% {
+    bottom: 1000px;
+  }
+}
+
+@keyframes bubble {
+  0% {
+    bottom: -100px;
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+  }
+  50% {
+    -webkit-transform: translateX(100px);
+            transform: translateX(100px);
+  }
+  100% {
+    bottom: 1000px;
+  }
+}
+
+/*---------------------------------------
+    sp-menu
+---------------------------------------*/
+@media (max-width: 767px) {
+  .container {
+    max-width: 767px;
+  }
+}
+
+.sp-menu {
+  margin: 0;
+  width: 100vw;
+  background-color: #3cc;
+  position: fixed;
+  bottom: 0;
+  padding: 5px 0;
+}
+
+.sp-menu .sp-item {
+  height: 80px;
+  position: relative;
+  max-width: 70px;
+}
+
+.sp-menu .sp-item .link-btn {
+  width: 70px;
+  height: 90px;
+  position: absolute;
+  top: -5px;
+  left: 0;
+}
+
+.sp-menu .sp-item p {
+  font-size: 1.2rem;
+  margin-bottom: 0;
+}
+/*# sourceMappingURL=thanks.css.map */
